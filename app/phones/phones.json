@@ -7,7 +7,8 @@
     "snippet": "The Next, Next Generation\r\n\r\nExperience the future with Motorola XOOM with Wi-Fi, the world's first tablet powered by Android 3.0 (Honeycomb).",
     "hot": 1,
     "featured": 1,
-    "price": 60
+    "price": 60,
+    "type": "motorola"
   },
   {
     "age": 1,
@@ -17,7 +18,8 @@
     "snippet": "The Next, Next Generation\n\nExperience the future with MOTOROLA XOOM, the world's first tablet powered by Android 3.0 (Honeycomb).",
     "hot": 1,
     "featured": 0,
-    "price": 110
+    "price": 110,
+    "type": "motorola"
   },
   {
     "age": 2,
@@ -29,6 +31,8 @@
     "hot": 1,
     "featured": 1,
     "price": 220
+  ,
+    "type": "motorola"
   },
   {
     "age": 3,
@@ -38,7 +42,8 @@
     "snippet": "Introducing Dell\u2122 Streak 7. Share photos, videos and movies together. It\u2019s small enough to carry around, big enough to gather around.",
     "hot": 0,
     "featured": 1,
-    "price": 420
+    "price": 420,
+    "type": "dell"
   },
   {
     "age": 4,
@@ -49,7 +54,8 @@
     "snippet": "The Samsung Gem\u2122 brings you everything that you would expect and more from a touch display smart phone \u2013 more apps, more features and a more affordable price.",
     "hot": 1,
     "featured": 1,
-    "price": 660
+    "price": 660,
+    "type": "samsung"
   },
   {
     "age": 5,
@@ -60,7 +66,8 @@
     "snippet": "The Dell Venue; Your Personal Express Lane to Everything",
     "hot": 1,
     "featured": 0,
-    "price": 860
+    "price": 860,
+    "type": "dell"
   },
   {
     "age": 6,
@@ -71,7 +78,8 @@
     "snippet": "Fast just got faster with Nexus S. A pure Google experience, Nexus S is the first phone to run Gingerbread (Android 2.3), the fastest version of Android yet.",
     "hot": 1,
     "featured": 0,
-    "price": 450
+    "price": 450,
+    "type": "iphone"
   },
   {
     "age": 7,
@@ -82,7 +90,8 @@
     "snippet": "Android Powered, Google Maps Navigation, 5 Customizable Home Screens",
     "hot": 0,
     "featured": 1,
-    "price": 320
+    "price": 320,
+    "type": "lg"
   },
   {
     "age": 8,
@@ -92,7 +101,8 @@
     "snippet": "Feel Free to Tab\u2122. The Samsung Galaxy Tab\u2122 brings you an ultra-mobile entertainment experience through its 7\u201d display, high-power processor and Adobe\u00ae Flash\u00ae Player compatibility.",
     "hot": 0,
     "featured": 1,
-    "price": 230
+    "price": 230,
+    "type": "samsung"
   },
   {
     "age": 9,
@@ -103,7 +113,8 @@
     "snippet": "The Samsung Showcase\u2122 delivers a cinema quality experience like you\u2019ve never seen before. Its innovative 4\u201d touch display technology provides rich picture brilliance, even outdoors",
     "hot": 1,
     "featured": 0,
-    "price": 970
+    "price": 970,
+    "type": "iphone"
   },
   {
     "age": 10,
@@ -114,7 +125,8 @@
     "snippet": "The first smartphone with a 1.2 GHz processor and global capabilities.",
     "hot": 1,
     "featured": 0,
-    "price": 990
+    "price": 990,
+    "type": "iphone"
   },
   {
     "age": 11,
@@ -125,7 +137,8 @@
     "snippet": "The next generation of DOES.",
     "hot": 1,
     "featured": 1,
-    "price": 970
+    "price": 970,
+    "type": "motorola"
   },
   {
     "age": 12,
@@ -136,7 +149,8 @@
     "snippet": "An experience to cheer about.",
     "hot": 0,
     "featured": 1,
-    "price": 450
+    "price": 450,
+    "type": "lg"
   },
   {
     "age": 13,
@@ -147,7 +161,8 @@
     "snippet": "Are you ready for everything life throws your way?",
     "hot": 0,
     "featured": 1,
-    "price": 110
+    "price": 110,
+    "type": "iphone"
   },
   {
     "age": 14,
@@ -158,7 +173,8 @@
     "snippet": "The T-Mobile myTouch 4G is a premium smartphone designed to deliver blazing fast 4G speeds so that you can video chat from practically anywhere, with or without Wi-Fi.",
     "hot": 1,
     "featured": 0,
-    "price": 220
+    "price": 220,
+    "type": "dell"
   },
   {
     "age": 15,
@@ -169,7 +185,8 @@
     "snippet": "The Samsung Mesmerize\u2122 delivers a cinema quality experience like you\u2019ve never seen before. Its innovative 4\u201d touch display technology provides rich picture brilliance,even outdoors",
     "hot": 0,
     "featured": 1,
-    "price": 120
+    "price": 120,
+    "type": "samsung"
   },
   {
     "age": 16,
@@ -180,7 +197,8 @@
     "snippet": "The Sanyo Zio by Kyocera is an Android smartphone with a combination of ultra-sleek styling, strong performance and unprecedented value.",
     "hot": 0,
     "featured": 1,
-    "price": 80
+    "price": 80,
+    "type": "lg"
   },
   {
     "age": 17,
@@ -190,7 +208,8 @@
     "snippet": "The Samsung Transform\u2122 brings you a fun way to customize your Android powered touch screen phone to just the way you like it through your favorite themed \u201cSprint ID Service Pack\u201d.",
     "hot": 0,
     "featured": 0,
-    "price": 60
+    "price": 60,
+    "type": "samsung"
   },
   {
     "age": 18,
@@ -200,7 +219,8 @@
     "snippet": "The T-Mobile G2 with Google is the first smartphone built for 4G speeds on T-Mobile's new network. Get the information you need, faster than you ever thought possible.",
     "hot": 1,
     "featured": 1,
-    "price": 570
+    "price": 570,
+    "type": "iphone"
   },
   {
     "age": 19,
@@ -210,6 +230,7 @@
     "snippet": "Motorola CHARM fits easily in your pocket or palm.  Includes MOTOBLUR service.",
     "hot": 1,
     "featured": 1,
-    "price": 880
+    "price": 880,
+    "type": "motorola"
   }
 ]

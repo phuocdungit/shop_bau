@@ -1,5 +1,6 @@
 {
   "price": 400,
+  "type": "dell",
     "additionalFeatures": "Front Facing 1.3MP Camera", 
     "android": {
         "os": "Android 2.2", 

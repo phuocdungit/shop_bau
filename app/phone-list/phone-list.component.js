@@ -6,7 +6,20 @@ angular.module('phoneList').component('phoneList', {
     controller: ['Phone',
         function PhoneListController(Phone) {
             this.phones = Phone.query();
-            this.orderProp = 'age';
-        }
+            this.orderProp = 'name';
+            this.show = '12';
+        },
     ]
 });
+angular.module('productList').component('productList', {
+    templateUrl: 'phone-list/phone-list.template.html',
+    controller: ['$routeParams', 'Phone',
+        function ProductListController($routeParams, Phone) {
+            this.phones = Phone.query();
+            this.orderProp = 'name';
+            this.show = '12';
+            this.type = $routeParams.type;
+        },
+    ]
+});
+

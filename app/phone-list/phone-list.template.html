@@ -1,36 +1,92 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-2">
-      <!--Sidebar content-->
+<div class="container_fullwidth">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner">
+                    <div class="bannerslide" id="bannerslide">
+                        <ul class="slides">
+                            <li>
+                                <a href="">
+                                    <img src="images/aa.jpg" width="100%" alt=""/>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clearfix">
+                </div>
+                <div class="products-grid">
+                    <div class="toolbar">
+                        <div class="sorter">
+                            <div class="sort-by">
+                                Sort by :
+                                <select ng-model="$ctrl.orderProp">
+                                    <option value="">None</option>
+                                    <option value="name">Name</option>
+                                    <option value="price">Price</option>
+                                </select>
+                            </div>
+                            <div class="limiter">
+                                Show :
+                                <select ng-model="$ctrl.show">
+                                    <option value="4">4</option>
+                                    <option value="8">8</option>
+                                    <option value="12">12</option>
+                                    <option value="16">16</option>
+                                    <option value="20">20</option>
+                                    <option value="40">40</option>
+                                </select>
+                            </div>
+                            <div class="search">
+                                Search:
+                                <input ng-model="$ctrl.query"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                    <div class="row">
+                        <div ng-repeat="phone in $ctrl.phones | filter:{ type : $ctrl.type }| orderBy:$ctrl.orderProp | limitTo:$ctrl.show"
+                             class="col-md-3 col-sm-6">
+                            <div class="products">
+                                <div class="thumbnail"><a href="#/phones/{{phone.id}}" class="thumb"><img
+                                        ng-src="{{phone.imageUrl}}" alt="{{phone.name}}"/></a></div>
+                                <div class="productname"><a href="#/phones/{{phone.id}}">{{phone.name}}</a></div>
+                                <h4 class="price">${{phone.price|number}}</h4>
+                                <div class="button_group">
+                                    <button class="button add-cart" type="button">Add To Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                    <div class="toolbar">
+                        <div class="sorter bottom">
+                            <div class="sort-by">
+                                Sort by :
+                                <select ng-model="$ctrl.orderProp">
+                                    <option value="">None</option>
+                                    <option value="name">Name</option>
+                                    <option value="price">Price</option>
+                                </select>
+                            </div>
+                            <div class="limiter">
+                                Show :
+                                <select ng-model="$ctrl.show">
+                                    <option value="4">4</option>
+                                    <option value="8">8</option>
+                                    <option value="12">12</option>
+                                    <option value="16">16</option>
+                                    <option value="20">20</option>
+                                    <option value="40">40</option>
+                                </select>
 
-      <p>
-        Search:
-        <input ng-model="$ctrl.query" />
-      </p>
-
-      <p>
-        Sort by:
-        <select ng-model="$ctrl.orderProp">
-          <option value="name">Alphabetical</option>
-          <option value="age">Newest</option>
-        </select>
-      </p>
-
-    </div>
-    <div class="col-md-10">
-      <!--Body content-->
-
-      <ul class="phones">
-        <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp"
-            class="thumbnail phone-list-item">
-          <a href="#!/phones/{{phone.id}}" class="thumb">
-            <img ng-src="{{phone.imageUrl}}" alt="{{phone.name}}" />
-          </a>
-          <a href="#!/phones/{{phone.id}}">{{phone.name}}</a>
-          <p>{{phone.snippet}}</p>
-        </li>
-      </ul>
-
-    </div>
-  </div>
-</div>
+                            </div>
+                            <div class="search">
+                                Search:
+                                <input ng-model="$ctrl.query"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix">

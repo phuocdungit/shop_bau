@@ -107,3 +107,21 @@
   margin-bottom: 50px;
   margin-top: 10px;
 }
+.sorter {
+  float: left;
+  width: 100%;
+}
+.sort-by, .limiter{
+  float: right;
+}
+.productname{height: 30px}
+.search{float: left}
+.sorter .search input {
+  padding: 6px;
+  border: 1px solid #e7e7e7;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: #f7544a;
+  min-width: 60px;
+}

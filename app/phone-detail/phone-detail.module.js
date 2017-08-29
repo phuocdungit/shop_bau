@@ -2,6 +2,7 @@
 
 // Define the `phoneDetail` module
 angular.module('phoneDetail', [
-  'ngRoute',
-  'core.phone'
+    'ngRoute',
+    'core.phone'
 ]);
+angular.module('hotList', ['core.phone']);
