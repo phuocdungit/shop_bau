@@ -1,0 +1,21 @@
+<div class="hot-products">
+    <h3 class="title"><strong>Hot</strong> Products</h3>
+    <ul id="hot">
+        <li>
+            <div class="row">
+                <div ng-repeat="phone in $ctrl.hot | filter:$ctrl.query | orderBy:hot | limitTo:4"
+                     class="col-md-3 col-sm-6">
+                    <div class="products">
+                        <div class="thumbnail"><a href="#/phones/{{phone.id}}" class="thumb"><img
+                                ng-src="{{phone.imageUrl}}" alt="{{phone.name}}"/></a></div>
+                        <div class="productname"><a href="#/phones/{{phone.id}}">{{phone.name}}</a></div>
+                        <h4 class="price">${{phone.price|number}}</h4>
+                        <div class="button_group">
+                            <button class="button add-cart" type="button">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

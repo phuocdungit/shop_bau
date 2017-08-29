@@ -17,12 +17,10 @@ angular.module('phoneDetail').component('phoneDetail', {
     ]
 });
 angular.module('hotList').component('hotList', {
-    templateUrl: 'phone-detail/phone-detail.template.html',
-    controller: ['$routeParams', 'Phone',
-        function HotListController($routeParams, Phone) {
+    templateUrl: 'phone-detail/hot.template.html',
+    controller: [ 'Phone',
+        function HotListController(Phone) {
             this.hot = Phone.query();
-            console.log(this.hot);
-            return false;
         },
     ]
 });
