@@ -4,9 +4,12 @@ angular.
   module('phonecatApp').
   config(['$locationProvider' ,'$routeProvider',
     function config($locationProvider, $routeProvider) {
-      $locationProvider.hashPrefix('!');
+      $locationProvider.hashPrefix('');
 
       $routeProvider.
+        when('/', {
+          template: '<home-page></home-page>'
+        }).
         when('/phones', {
           template: '<phone-list></phone-list>'
         }).

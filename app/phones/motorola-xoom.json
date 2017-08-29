@@ -1,4 +1,4 @@
-{
+{  "price": 400,
     "additionalFeatures": "Front-facing camera. Sensors: proximity, ambient light, barometer, gyroscope.", 
     "android": {
         "os": "Android 3.0", 
