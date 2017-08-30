@@ -43,6 +43,7 @@
 .option-cart-item{
   max-height: 400px;
   overflow-y: scroll;
+  width: 280px;
 }
 [data-notify="progressbar"] {
   margin-bottom: 0px;

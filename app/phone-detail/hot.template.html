@@ -9,7 +9,7 @@
                         <div class="thumbnail"><a href="#/phones/{{phone.id}}" class="thumb"><img
                                 ng-src="{{phone.imageUrl}}" alt="{{phone.name}}"/></a></div>
                         <div class="productname"><a href="#/phones/{{phone.id}}">{{phone.name}}</a></div>
-                        <h4 class="price">${{phone.price|number}}</h4>
+                        <h4 class="price">${{phone.price|number:2}}</h4>
                         <div class="button_group" ng-controller="ButtonGroup as button">
                             <button ng-click="button.AddToCart(phone.id)" class="button add-cart" type="button">
                                 Add To Cart

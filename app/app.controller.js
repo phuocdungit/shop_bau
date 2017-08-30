@@ -14,7 +14,7 @@ angular.module('phonecatApp').controller('ButtonGroup', ['$http', function ($htt
                 '                                                        class="light-red">1</span></p>\n' +
                 '                                            </div>\n' +
                 '                                            <div class="right">\n' +
-                '                                                <p class="price">$' + response.price + '</p>\n' +
+                '                                                <p class="price">$' + formatNumber(response.price) + '</p>\n' +
                 '                                                <a href="#" ng-click="cart.removeItemCart()" class="remove"><img src="images/remove.png"\n' +
                 '                                                                                alt="remove"></a>\n' +
                 '                                            </div>\n' +
