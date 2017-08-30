@@ -64,20 +64,16 @@
                                     </option>
                                 </select>
                             </div>
-                            <div class="button_group">
-                                <button class="button">
+                            <div class="button_group" ng-controller="ButtonGroup as button">
+                                <button ng-click="button.AddToCart($ctrl.phone.id)" class="button add-cart" type="button">
                                     Add To Cart
                                 </button>
-                                <button class="button compare">
+                                <button class="button compare" type="button">
                                     <i class="fa fa-exchange">
                                     </i>
                                 </button>
-                                <button class="button favorite">
+                                <button class="button wishlist" type="button">
                                     <i class="fa fa-heart-o">
-                                    </i>
-                                </button>
-                                <button class="button favorite">
-                                    <i class="fa fa-envelope-o">
                                     </i>
                                 </button>
                             </div>

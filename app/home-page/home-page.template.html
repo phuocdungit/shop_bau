@@ -36,8 +36,8 @@
                                             ng-src="{{phone.imageUrl}}" alt="{{phone.name}}"/></a></div>
                                     <div class="productname"><a href="#/phones/{{phone.id}}">{{phone.name}}</a></div>
                                     <h4 class="price">${{phone.price|number}}</h4>
-                                    <div class="button_group">
-                                        <button class="button add-cart" type="button">
+                                    <div class="button_group" ng-controller="ButtonGroup as button">
+                                        <button ng-click="button.AddToCart(phone.id)" class="button add-cart" type="button">
                                             Add To Cart
                                         </button>
                                         <button class="button compare" type="button">
@@ -68,8 +68,8 @@
                                             ng-src="{{phone.imageUrl}}" alt="{{phone.name}}"/></a></div>
                                     <div class="productname"><a href="#/phones/{{phone.id}}">{{phone.name}}</a></div>
                                     <h4 class="price">${{phone.price|number}}</h4>
-                                    <div class="button_group">
-                                        <button class="button add-cart" type="button">
+                                    <div class="button_group" ng-controller="ButtonGroup as button">
+                                        <button ng-click="button.AddToCart(phone.id)" class="button add-cart" type="button">
                                             Add To Cart
                                         </button>
                                         <button class="button compare" type="button">
