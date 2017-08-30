@@ -62,5 +62,23 @@
     "storage": {
         "flash": "1100MB", 
         "ram": "768MB"
+    },
+    "reviews": [
+    {
+      "quality": 5,
+      "price": 4,
+      "value": 3,
+      "name": "dung nguyen",
+      "content": "I love this product!",
+      "email": "phuocdungit@gmail.com"
+    },
+    {
+      "quality": 5,
+      "price": 5,
+      "value": 5,
+      "name": "bau",
+      "content": "I love this product hsdgkagh",
+      "email": "joe@thomas.com"
     }
+  ]
 }

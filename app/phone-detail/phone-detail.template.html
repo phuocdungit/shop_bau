@@ -121,7 +121,9 @@
                                 <tbody>
                                 <tr>
                                     <td>Availability</td>
-                                    <td><span ng-repeat="availability in $ctrl.phone.availability">{{availability}} </span></td>
+                                    <td><span
+                                            ng-repeat="availability in $ctrl.phone.availability">{{availability}} </span>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <th colspan="2"><strong>Battery</strong></th>
@@ -253,27 +255,24 @@
                             </table>
                         </div>
                         <div class="tab-content" id="Reviews">
-                            <form>
+                            <blockquote ng-repeat="review in $ctrl.phone.reviews">
+                                <p>Quality: {{review.quality}}</p>
+                                <p>Price: {{review.price}}</p>
+                                <p>Value: {{review.value}}</p>
+                                <p>Name: {{review.name}}</p>
+                                {{review.content}}
+                                - <cite>by: {{review.email}}</cite>
+                            </blockquote>
+                            <form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
+                                  ng-submit="reviewForm.$valid && reviewCtrl.addReview($ctrl.phone)" novalidate>
                                 <table>
                                     <thead>
                                     <tr>
                                         <th>
                                             &nbsp;
                                         </th>
-                                        <th>
-                                            1 star
-                                        </th>
-                                        <th>
-                                            2 stars
-                                        </th>
-                                        <th>
-                                            3 stars
-                                        </th>
-                                        <th>
-                                            4 stars
-                                        </th>
-                                        <th>
-                                            5 stars
+                                        <th ng-repeat="i in [1,2,3,4,5]">
+                                            {{i}} star
                                         </th>
                                     </tr>
                                     </thead>
@@ -282,60 +281,28 @@
                                         <td>
                                             Quality
                                         </td>
-                                        <td>
-                                            <input type="radio" name="quality" value="Blue"/>
-                                        </td>
-                                        <td>
-                                            <input type="radio" name="quality" value="">
-                                        </td>
-                                        <td>
-                                            <input type="radio" name="quality" value="">
-                                        </td>
-                                        <td>
-                                            <input type="radio" name="quality" value="">
-                                        </td>
-                                        <td>
-                                            <input type="radio" name="quality" value="">
+                                        <td ng-repeat="i in [1,2,3,4,5]">
+                                            <input type="radio" ng-model="reviewCtrl.review.quality" name="quality"
+                                                   value="{{i}}"/>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             Price
                                         </td>
-                                        <td>
-                                            <input type="radio" name="price" value="">
-                                        </td>
-                                        <td>
-                                            <input type="radio" name="price" value="">
-                                        </td>
-                                        <td>
-                                            <input type="radio" name="price" value="">
-                                        </td>
-                                        <td>
-                                            <input type="radio" name="price" value="">
-                                        </td>
-                                        <td>
-                                            <input type="radio" name="price" value="">
+                                        <td ng-repeat="i in [1,2,3,4,5]">
+                                            <input ng-model="reviewCtrl.review.price" type="radio" name="price"
+                                                   value="{{i}}">
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>
                                             Value
                                         </td>
-                                        <td>
-                                            <input type="radio" name="value" value="">
+                                        <td ng-repeat="i in [1,2,3,4,5]">
+                                            <input ng-model="reviewCtrl.review.value" type="radio" name="value"
+                                                   value="{{i}}">
                                         </td>
-                                        <td>
-                                            <input type="radio" name="value" value="">
-                                        </td>
-                                        <td>
-                                            <input type="radio" name="value" value="">
-                                        </td>
-                                        <td>
-                                            <input type="radio" name="value" value="">
-                                        </td>
-                                        <td>
-                                            <input type="radio" name="value" value="">
                                         </td>
                                     </tr>
                                     </tbody>
@@ -343,46 +310,23 @@
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6">
                                         <div class="form-row">
-                                            <label class="lebel-abs">
-                                                Your Name
-                                                <strong class="red">
-                                                    *
-                                                </strong>
-                                            </label>
-                                            <input type="text" name="" class="input namefild">
+                                            <input placeholder="Your Name" ng-model="reviewCtrl.review.name" type="text"
+                                                   name="" required class="input namefild">
                                         </div>
                                         <div class="form-row">
-                                            <label class="lebel-abs">
-                                                Your Email
-                                                <strong class="red">
-                                                    *
-                                                </strong>
-                                            </label>
-                                            <input type="email" name="" class="input emailfild">
-                                        </div>
-                                        <div class="form-row">
-                                            <label class="lebel-abs">
-                                                Summary of You Review
-                                                <strong class="red">
-                                                    *
-                                                </strong>
-                                            </label>
-                                            <input type="text" name="" class="input summeryfild">
+                                            <input placeholder="Your Email" ng-model="reviewCtrl.review.email"
+                                                   type="email" required name="" class="input emailfild">
                                         </div>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
                                         <div class="form-row">
-                                            <label class="lebel-abs">
-                                                Your Name
-                                                <strong class="red">
-                                                    *
-                                                </strong>
-                                            </label>
-                                            <textarea class="input textareafild" name="" rows="7">
-                            </textarea>
+                                            <textarea placeholder="Content" ng-model="reviewCtrl.review.content"
+                                                      class="input textareafild" name="" required rows="7">
+                                            </textarea>
                                         </div>
                                         <div class="form-row">
-                                            <input type="submit" value="Submit" class="button">
+                                            <input type="submit" class="btn btn-primary pull-right"
+                                                   value="Submit Review"/>
                                         </div>
                                     </div>
                                 </div>
@@ -455,7 +399,7 @@
         </div>
         <div class="clearfix">
         </div>
-<hot-list></hot-list>
+        <hot-list></hot-list>
     </div>
     <script type="text/javascript" src="js/jquery-1.10.2.min.js">
     </script>

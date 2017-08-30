@@ -46,7 +46,7 @@
                     <div class="clearfix">
                     </div>
                     <div class="row">
-                        <div ng-repeat="phone in $ctrl.phones | filter:{ type : $ctrl.type }| orderBy:$ctrl.orderProp | limitTo:$ctrl.show"
+                        <div ng-repeat="phone in $ctrl.phones | filter:{ type : $ctrl.type||$ctrl.query }| orderBy:$ctrl.orderProp | limitTo:$ctrl.show"
                              class="col-md-3 col-sm-6">
                             <div class="products">
                                 <div class="thumbnail"><a href="#/phones/{{phone.id}}" class="thumb"><img
@@ -54,7 +54,17 @@
                                 <div class="productname"><a href="#/phones/{{phone.id}}">{{phone.name}}</a></div>
                                 <h4 class="price">${{phone.price|number}}</h4>
                                 <div class="button_group">
-                                    <button class="button add-cart" type="button">Add To Cart</button>
+                                    <button class="button add-cart" type="button">
+                                        Add To Cart
+                                    </button>
+                                    <button class="button compare" type="button">
+                                        <i class="fa fa-exchange">
+                                        </i>
+                                    </button>
+                                    <button class="button wishlist" type="button">
+                                        <i class="fa fa-heart-o">
+                                        </i>
+                                    </button>
                                 </div>
                             </div>
                         </div>

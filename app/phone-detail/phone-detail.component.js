@@ -24,3 +24,14 @@ angular.module('hotList').component('hotList', {
         },
     ]
 });
+
+angular.module('phoneDetail').controller('ReviewController', function($scope) {
+    this.review = {};
+
+    this.addReview = function(info) {
+
+        info.reviews.push(this.review);
+
+        this.review = {};
+    };
+});

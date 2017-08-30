@@ -18,7 +18,10 @@ angular.module('productList').component('productList', {
             this.phones = Phone.query();
             this.orderProp = 'name';
             this.show = '12';
-            this.type = $routeParams.type;
+            if ($routeParams.type != 'all') {
+                this.type = $routeParams.type;
+            }
+
         },
     ]
 });
