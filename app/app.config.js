@@ -2,8 +2,6 @@
 
 angular.module('phonecatApp').config(['$locationProvider', '$routeProvider',
     function config($locationProvider, $routeProvider) {
-        $locationProvider.hashPrefix('');
-
         $routeProvider.when('/', {
             template: '<home-page></home-page>'
         }).when('/phones', {
@@ -13,5 +11,6 @@ angular.module('phonecatApp').config(['$locationProvider', '$routeProvider',
         }).when('/phones/:phoneId', {
             template: '<phone-detail></phone-detail>'
         }).otherwise('/phones');
-    }
+        $locationProvider.html5Mode(true);
+}
 ]);
